@@ -27,15 +27,9 @@ public class MainActivity extends Activity {
             // Get the previous state of the stopwatch
             // if the activity has been
             // destroyed and recreated.
-            seconds
-                    = savedInstanceState
-                    .getInt("seconds");
-            running
-                    = savedInstanceState
-                    .getBoolean("running");
-            wasRunning
-                    = savedInstanceState
-                    .getBoolean("wasRunning");
+            seconds = savedInstanceState.getInt("seconds");
+            running = savedInstanceState.getBoolean("running");
+            wasRunning = savedInstanceState.getBoolean("wasRunning");
         }
         runTimer();
     }
@@ -115,8 +109,7 @@ public class MainActivity extends Activity {
         final TextView timeView = (TextView)findViewById(R.id.textView);
 
         // Creates a new Handler
-        final Handler handler
-                = new Handler();
+        final Handler handler = new Handler();
 
         // Call the post() method,
         // passing in a new Runnable.
